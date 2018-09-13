@@ -235,6 +235,26 @@
       letter-spacing: 1px;
   }
 
+  .action-label.one {animation: MoveUpDownR 2.3s .1s ease infinite;}
+        .action-label.two {animation: MoveUpDownR 2.3s .4s ease infinite; background-color:#333;}
+        .action-label.three {animation: MoveUpDownR 2.3s .8s ease infinite; background-color:#333;}
+        .action-label.four {animation: MoveUpDownR 2.3s 1.2s ease infinite; background-color:#333;}
+        header.clearfix h1 { font-weight: 800;}
+        .action-description p {font-weight: 800;}
+
+        @keyframes MoveUpDownR {
+                            0% {
+                                transform: translateY(0px);
+                            }
+                            
+
+                            50% {transform: translateY(5px);
+                            }
+
+                            100% {transform: translateY(0px);
+                            }
+                        }
+
   footer {
       height: 4em;
       background-color: #373737;
@@ -271,6 +291,8 @@
       header.clearfix h1 {
           font-size: 2.8em;
       }
+      header.clearfix h1.project-title {font-size: 2em; }
+
       header.clearfix .container.content {
           padding-left: 3em;
           padding-right: 3em;
