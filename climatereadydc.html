@@ -28,31 +28,13 @@
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
         <style>
-            #myVideo {
-    /*position: fixed;*/
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-}
-#myBtn {
-    width: 200px;
-    font-size: 18px;
-    padding: 10px;
-    border: none;
-    background: #000;
-    color: #fff;
-    cursor: pointer;
-}
-
-#myBtn:hover {
-    background: #ddd;
-    color: black;
-}
+           
         .action-label.one {animation: MoveUpDownR 2.3s .1s ease infinite;}
         .action-label.two {animation: MoveUpDownR 2.3s .4s ease infinite; background-color:#333;}
         .action-label.three {animation: MoveUpDownR 2.3s .8s ease infinite; background-color:#333;}
         .action-label.four {animation: MoveUpDownR 2.3s 1.2s ease infinite; background-color:#333;}
+        header.clearfix h1 { font-weight: 800;}
+        .action-description p {font-weight: 800;}
 
         @keyframes MoveUpDownR {
                             0% {
@@ -71,13 +53,18 @@
 </head>
 
 <body>
-    <header class="clearfix development">
-        <div class="container-fluid" style="background-color:#006836;">
+    <header class="clearfix">
+        <div class="container-fluid" style="background-color:#333; padding-bottom: 2em;">
             <img width="60px" style="padding-top:1em;" src="images/white-tree-logo.png">
+        
+       
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6"><br><br><h1>Advocacy Works: Climate Ready DC Plan</h1></div>
+                <div class="col-lg-6"><a href="https://www.youtube.com/watch?v=yvZJfcLZcsk&feature=youtu.be" data-toggle="lightbox" data-width="1280"><img width="100%" src="images/video-still-play.png"></a></div>
+            </div>
         </div>
-        <div class="container content">
-            <h1>Climate Ready DC Plan</h1>
-        </div>
+    </div>
     </header>
     <div class="container content featured-developments">
         <h2 style="text-align:center;">The Problem: Heat & Flooding</h2>
@@ -93,18 +80,13 @@
             or more. </p>
     </div>
     <div class="container">
-        <br>
-        <h2 style="text-align:center;">Impervious Surface Stormwater Runoff</h3>
-        <img src="images/impervious-surface.svg">
-        <br>
-    </div>
-    <div class="container">
-        <br><br>
-        <h2 style="text-align:center;">Natural Ground Cover Stormwater Runoff</h3>
         <p class="maintext">In contrast natural ground cover absorbs stormwater and filters it through trees' established root systems resulting
             in less than <strong>10 percent runoff.</strong> Leaves also capture rainfall like tiny cups, and through evapotranspiration,
             cool surrounding air.</p>
+            <br>
         <div class="naturalgroundcover">
+                <br>
+                <h2 style="text-align:center;">Natural Ground Cover Stormwater Runoff</h3>
             <br>
             <figure class="natural-ground-cover">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 984 630">
@@ -456,34 +438,6 @@
             </div>
         </div>
     </div>
-    <div class="row justify-content-center">
-        <div class="col-sm-3" data-code="example-1">
-            <a href="https://www.youtube.com/watch?v=yvZJfcLZcsk&feature=youtu.be" data-toggle="lightbox" data-title="A random title" data-footer="A custom footer text">
-                <img src="https://unsplash.it/600.jpg?image=250" class="img-fluid">
-            </a>
-        </div>
-        <div data-code="example-3">
-            <p><a href="http://www.youtube.com/watch?v=k6mFF3VmVAs" data-toggle="lightbox">Justin Bieber - Love Yourself</a></p>
-            <p><a href="http://youtu.be/b0jqPvpn3sY" data-toggle="lightbox">Tame Impala - Elephant (using youtu.be link)</a></p>
-            <p><a href="https://www.youtube.com/watch?v=oyEuk8j8imI&amp;rel=0" data-toggle="lightbox">Justin Bieber - Love Yourself</a> (suppress related videos with <code>&amp;rel=0</code>)</p>
-        </div>
-    </div>
-    <div class="embed-responsive embed-responsive-16by9">
-        <a href="https://www.youtube.com/watch?v=yvZJfcLZcsk&feature=youtu.be" data-toggle="lightbox" data-title="A random title" data-footer="A custom footer text"><iframe width="560" height="315" src="https://www.youtube.com/embed/hbzQlQjwiUY" frameborder="0" allow="autoplay; encrypted-media"
-                allowfullscreen></iframe></a>
-        </div>
-        <a href="https://www.youtube.com/watch?v=yvZJfcLZcsk&feature=youtu.be" data-toggle="lightbox" data-title="A random title" data-footer="A custom footer text">
-
-            <div class="video">
-                <p>Um die Lightbox zu laden muss ekko-lightbox.js installiert sein. jQuery und bootstrap.js werden ebenfalls benötigt.</p>
-                
-                <p style="margin-top: 50px;">
-                  <a data-width="800" data-toggle="lightbox" href="https://www.youtube.com/embed/sXYIxJScSik?rel=0" frameborder="0" allowfullscreen>
-                    <img src="http://image005.flaticon.com/1/svg/122/122642.svg" width="80" height="80" alt="Play Video">
-                  </a>
-                </p>
-              </div>
-        
     <footer>
         <p style="color:rgba(250,250,250,.8); font-size:.83em; text-align:center;">&copy;
             <script>
