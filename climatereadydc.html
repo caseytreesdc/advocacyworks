@@ -136,9 +136,7 @@
                                         }
 
                                         .cls-5-runoff {
-                                            fill: #92cfe1;
-                                            stroke: #8cc6d3;
-                                            /*stroke-dasharray: 5;*/
+                                        fill: rgb(146,207,225,.8);
                                         }
 
                                         .cls-6 {
@@ -409,14 +407,14 @@
                 </div>
                 <div class="col-lg-6">
                         <br>
-                        <h2 style="text-align:center;">Impervious Ground Cover</h3>
+                        <h2 style="text-align:center;">Impervious Surface</h3>
                             <br>
                     <figure class="Impervious">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 984 630">
                             <defs>
                                 <style>
                                     .ls-1 {
-                                        fill: #fff;
+                                        fill: rgba(255, 255, 255, 0.8);
                                     }
 
                                     .ls-10,
@@ -466,7 +464,7 @@
                                     }
 
                                     .ls-8 {
-                                        fill: #92cfe1;
+                                        fill: rgb(146,207,225,.8);
                                     }
 
                                     .ls-9 {
@@ -862,7 +860,7 @@
                         <p>ACTION 4</p>
                     </div>
                     <div class="action-description">
-                        <p>Plant tree along riverbanks to keep soil stable during floods</p>
+                        <p>Plant trees along riverbanks to keep soil stable during floods</p>
                     </div>
                 </div>
             </div>
@@ -970,18 +968,18 @@
             var tweensixteen = TweenMax.fromTo(clouds, 1, { x: 300 }, { x: 0 });
             var tweenseventeen = TweenMax.fromTo(rain, 1, { x: 300 }, { x: 0 });
             //impervious surface tweens
-            var tweenoneimp = TweenMax.fromTo(fivedeepimp, 1, {x: -440}, {x:0});
+            var tweenoneimp = TweenMax.fromTo(fivedeepimp, 1, {x: -440, y: 150}, {x:0, y:150});
             var tweenfourimp = TweenMax.from(fivedeepimp, 3, { autoAlpha: 0, delay: 2 });
             var tweentwoimp = TweenMax.to(rainimp, 10, { strokeDashoffset: "-1200" });
             var tweenthreeimp = TweenMax.from(rainimp, 3, { autoAlpha: 0, repeat: 1, yoyo: true });
-            var tweenfiveimp = TweenMax.fromTo(tenshallowimp, 1, { x: 611 }, { x: 0 });
+            var tweenfiveimp = TweenMax.fromTo(tenshallowimp, 1, { x: 611, y: 70 }, { x: 0, y:70 });
             var tweensiximp = TweenMax.from(tenshallowimp, 3, { autoAlpha: 0, delay: 2 });
             var tweensevenimp = TweenMax.fromTo(runoffimp, 5, { y: 102 }, { y: 0 });
             var tweennineimp = TweenMax.fromTo(deepinfiltrationimp, 5, { y: -12 }, { y: 30, delay: 2 });
             var tweentenimp = TweenMax.fromTo(shallowinfiltrationimp, 3, { y: 0 }, { y: 23, delay: 1 });
             var tweenelevenimp = TweenMax.fromTo(fiftyfiverunoffimp, 2, { x: 365 }, { x: 0 });
             var tweentwelveimp = TweenMax.from(fiftyfiverunoffimp, 2, { autoAlpha: 0 });
-            var tweenthirteenimp = TweenMax.fromTo(thirtyevapotranspirationimp, 3, { x: -385 }, { x: 0 });
+            var tweenthirteenimp = TweenMax.fromTo(thirtyevapotranspirationimp, 3, { x: -385, y: -48 }, { x: 0, y: -48 });
             var tweenfourteenimp = TweenMax.from(thirtyevapotranspirationimp, 2, { autoAlpha: 0 });
             var tweenfifteenimp = TweenMax.from(evapotranspirationimp, 3, { autoAlpha: 0, repeat: 1, yoyo: true });
             var tweensixteenimp = TweenMax.fromTo(cloudsimp, 1, { x: 300 }, { x: 0 });
