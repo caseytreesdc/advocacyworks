@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    
 <head>
     <meta charset="utf-8">
     <metta http equiv="X-UA-Compatible" content="IE=edge">
@@ -51,11 +50,25 @@
                 color: #92cfe1;
             }
 
+            .videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
             .wow {
                 visibility: hidden;
             }
             @media only screen and (min-width:990px) {
-                .aw {padding: 5em 3em;}
+                .aw {padding: 3em 1em 2em;}
             }
 
             @media only screen and (max-width: 990px) {
@@ -91,7 +104,7 @@
                 </a>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-6">
                         <div class="aw wow fadeIn">
                             <figure class="aw">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 570 143.59">
@@ -147,12 +160,12 @@
                                 <text class="crdc" transform="translate(10.18 129.04)">CLIMATE READY DC
                                 </text>
                             </svg>
-                            </figure>
+                        </figure>
                         </div>
                     </div>
-                    <div class="col-lg-12 wow fadeInUp">
+                    <div class="col-lg-6 wow fadeInUp">
                         <a href="https://www.youtube.com/watch?v=yvZJfcLZcsk&feature=youtu.be&amp;rel=0" data-toggle="lightbox" data-width="1280">
-                            <img width="100%" src="images/video-still-play.png">
+                            <img width="100%" src="images/video-still-2.png">
                         </a>
                     </div>
                 </div>
@@ -312,8 +325,9 @@
                                 <g id="Natural_Ground_Cover" data-name="Natural Ground Cover">
                                     <rect id="Underground" class="cls-1" x="-1" y="363" width="984" height="267" />
                                     <g class="Watertable" data-name="watertable">
-                                        <rect id="Watertable" class="cls-2" x="-1" y="363" width="984" height="267" />
-                                    </g>
+                                            <rect id="Watertable" class="cls-2" x="-1" y="363" width="984" height="267" />
+                                        </g>
+                                    
                                     <g class="Deep_Infiltration" data-name="Deep Infiltration">
                                         <polygon class="cls-3" points="868.99 473 868.99 289.37 847 289.37 847 473 831 473 857.5 507.63 883.99 473 868.99 473" />
                                         <polygon class="cls-4" points="858.1 507.63 884.59 473 869.59 473 869.59 289.37 858.6 289.37 858.1 507.63" />
@@ -1824,7 +1838,7 @@
             //build dasharray scene
             var scene = new ScrollMagic.Scene({triggerElement: ".aw", duration: 100, tweenChanges: true})
                 .setTween (tweenaw)
-                .addTo(controlleraw)
+                .addTo(controlleraw);
 
 
 
