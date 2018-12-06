@@ -199,7 +199,7 @@
   .action-content {
       background-image: url(images/aerial-dc.png);
       background-size: cover;
-      height: 220px;
+      /*height: 315px;*/
       margin-bottom: 25px;
       margin-top: 25px;
   }
@@ -208,10 +208,11 @@
       background: #333;
       padding: 12px 30px;
       display: inline-block;
-      position: absolute;
-      top: 0px;
-      left: 50px;
       color: #fff;
+      border-radius: 10px 0;
+      width: 100%;
+      text-align: center;
+      
   }
 
   .action-label p {
@@ -223,23 +224,23 @@
   .action-description {
       color: #fff;
       margin: 0 auto;
-      position: absolute;
-      top: 35%;
-      padding: 0 4em;
+      /*position: absolute;
+      top: 19%;*/
+      padding: 1em 1em;
   }
 
   .action-description p {
       font-size: 1em;
-      font-weight: 100;
-      letter-spacing: 1px;
+      font-weight: 400;
+      /*letter-spacing: 1px;*/
   }
 
-  .action-label.one {animation: MoveUpDownR 2.3s .1s ease infinite;}
-        .action-label.two {animation: MoveUpDownR 2.3s .4s ease infinite; background-color:#333;}
-        .action-label.three {animation: MoveUpDownR 2.3s .8s ease infinite; background-color:#333;}
-        .action-label.four {animation: MoveUpDownR 2.3s 1.2s ease infinite; background-color:#333;}
+  .action-label.one {animation: MoveUpDownR 2.3s .1s ease infinite; background-color:#87a385;}
+        .action-label.two {animation: MoveUpDownR 2.3s .4s ease infinite; background-color:#87a385;}
+        .action-label.three {animation: MoveUpDownR 2.3s .8s ease infinite; background-color:#87a385;}
+        .action-label.four {animation: MoveUpDownR 2.3s 1.2s ease infinite; background-color:#87a385;}
         header.clearfix h1 { font-weight: 800;}
-        .action-description p {font-weight: 800;}
+
 
         @keyframes MoveUpDownR {
                             0% {
@@ -266,7 +267,7 @@
   }
 
   @media screen and (max-width: 1200px) {
-      .action-description {padding: 0 2em;}
+      .action-description {padding: 2em 1em;}
   }
 
   @media screen and (max-width: 768px) {
@@ -302,19 +303,19 @@
       }
       
       .action-description p {
-          font-size: 1.2em;
+          /*font-size: 1.2em;*/
       }
   }
 
   @media screen and (max-width:375px) {
-      .action-content {
+      /*.action-content {
           height: 220px;
-      }
+      }*/
       .action-description {
-          top: 28%;
+          /*top: 28%;*/
           padding: 0 1.5em;
       }
       .action-description p {
-          font-size: 1.2em;
+          /*font-size: 1.2em;*/
       }
   }
