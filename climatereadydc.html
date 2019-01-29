@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <metta http equiv="X-UA-Compatible" content="IE=edge">
+    <meta http equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>Climate Ready DC Plan</title>
@@ -65,29 +65,42 @@
             }
 
             nav.navbar.navbar-light.bg-light {
-            z-index: 999999;
+                z-index: 999999;
             }
+
+            h2.wow.fadeIn.slow {padding-top: 1em; padding-bottom: .4em;}
+
+            h2.number {
+        color: rgba(0,0,0,.1);
+        font-weight: 900;
+        font-size: 14em;
+        padding: 0!important;
+        position: absolute;
+        top: 0;
+        right: 0;
+        letter-spacing: -11px;
+        }
 
             .container-fluid.watch {
-                background-color: #fff;
+
                 z-index: 999999;
                 padding-top: 3em;
+                position: relative;
             }
 
-            #myVideo {
-            position: absolute;
-            right: 0;
-            top: -80px;
-            min-width: 100%;
-            height: 120vh;
-            z-index: -1;
-            
-    }
+            /*#myVideo {
+                position: absolute;
+                right: 0;
+                top: -80px;
+                min-width: 100%;
+                height: 120vh;
+                z-index: -1;
+
+            }
 
             .videoWrapper {
                 position: relative;
                 padding-bottom: 56.25%;
-                /* 16:9 */
                 padding-top: 25px;
                 height: 0;
             }
@@ -98,20 +111,87 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
+            }*/
+
+            .skew {
+                position: absolute;
+                background: #fff;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+            }
+
+            header.clearfix {
+                position: relative;
+                background-color: #000;
+                height: 75vh;
+                min-height: 25rem;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            header video {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                min-width: 100%;
+                min-height: 100%;
+                width: auto;
+                height: auto;
+                z-index: 0;
+                -ms-transform: translateX(-50%) translateY(-50%);
+                -moz-transform: translateX(-50%) translateY(-50%);
+                -webkit-transform: translateX(-50%) translateY(-50%);
+                transform: translateX(-50%) translateY(-50%);
+
+            }
+
+            header .container {
+                position: relative;
+                z-index: 2;
+            }
+
+            header .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background-color: #000;
+                opacity: 0.5;
+                z-index: 1;
+            }
+
+            .container.con-700 {
+    max-width: 700px;
+}
+            
+            .container-fluid.content {
+                position: relative;
+            }
+            .container-fluid.content svg {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 10vw;
+            /* set height to pixels if you want angle to change with screen width */
             }
 
             .waterpollution {
-                background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .7)), url('images/water-pollution-2.jpg');
+                background-image: linear-gradient(rgba(136, 202, 222, .4), rgba(0, 0, 0, .7)), url('images/water-pollution.jpg');
                 background-size: cover;
                 background-attachment: fixed;
                 padding: 15vh 0;
             }
 
             p.callout-text {
-                color:#fff;
+                color: #fff;
                 font-size: 1.2em;
-                max-width:700px;
+                max-width: 700px;
                 margin: 0 auto;
+                font-weight: 400;
+                line-height: 2em;
             }
 
             .wow {
@@ -136,15 +216,23 @@
                 }
             }
 
-            @media only screen and (max-width: 768px){
-                #myVideo {height: 74vh}
+            @media only screen and (max-width: 768px) {
+                /*#myVideo {
+                    height: 74vh
+                }*/
+
+                a.navbar-brand {
+                width: 150px;   
+                }
             }
 
             @media only screen and (max-width: 380px) {
                 .title-crdc {
                     font-size: .4em !important;
                 }
-                #myVideo {height: 58vh}
+                /*#myVideo {
+                    height: 58vh
+                }*/
             }
         </style>
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -166,15 +254,14 @@
         </a>
     </nav>
     <header class="clearfix">
-            <video autoplay muted loop id="myVideo">
-                    <source src="videos/Wet_Leaves_on_Street_Rainy.mp4" type="video/mp4">
-                  </video>
-        <div class="container-fluid" style="background-color: rgba(0,0,0,.5); padding: 2em 0;">
-            <!-- Old Logo <a href="https://caseytrees.org/">
-                    <img width="60px" style="padding-top:1em;" src="images/white-tree-logo.png" alt="casey trees">
-                </a>-->
-            <div class="container">
-                <div class="row">
+
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src='videos/Tranquil_River_4.mp4' type="video/mp4">
+          </video>
+        <div class="container-fluid h-100">
+            <div class="container h-100">
+                <div class="d-flex h-100 text-center align-items-center">
                     <div class="col-lg-12">
                         <div class="aw wow fadeIn">
                             <figure class="aw">
@@ -234,46 +321,47 @@
                             </figure>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
     </header>
-    <div class="container-fluid watch">
-        <div class="container">
-        <div class="row">
-    <div class="col-lg-12">
-            <h2 class="wow fadeIn delay-1s" style="text-align:center;">WATCH</h2>
-        <a href="https://www.youtube.com/watch?v=yvZJfcLZcsk&feature=youtu.be&amp;rel=0" data-toggle="lightbox" data-width="1280">
-            <img width="100%" src="images/video-still-2.PNG">
-        </a>
-    </div>
-</div>
-</div>
-</div>
-    <div class="container content featured-developments">
-        <h2 class="wow fadeIn slow" style="text-align:center;">The Problem: Heat & Flooding</h2>
-        <p class="maintext">Climate change experts are predicting hotter summers and heavier rains in Washington, D.C. Back in 2016 the District Department of Energy and the Environment (DOEE) drafted the
+   
+    <div class="container-fluid content">
+        <div class="container con-700">
+        <h2 class="wow fadeIn slow" style="text-align:left;">The Problem</h2>
+        <h2 class="number wow fadeIn slow">01</h2>
+        <p class="maintext">Climate change experts are predicting hotter summers and heavier rains in Washington, D.C. Back in 2016 the District
+            Department of Energy and the Environment (DOEE) drafted the
             <a href="https://doee.dc.gov/sites/default/files/dc/sites/ddoe/service_content/attachments/CRDC-Report-FINAL-Web.pdf" target="_blank">Climate Ready D.C. Plan.
             </a> The goal of that plan was to identify strategies to protect communities from the effects of climate change.
             During the public engagement period Casey Trees staff and volunteers worked with the city to identify how trees
             could be incorporated into the plan as a management tool.</p>
+        </div>
     </div>
-    <div class="container content featured-developments">
-        <h2 class="wow fadeIn slow" style="text-align:center;">The Solution: Trees</h2>
-        <p class="maintext">Research shows that trees increase climate change resilience in cities. D.C.’s trees are an incredible tool for dealing with the effects of climate change. They work really hard to absorb
-            excess stormwater and to cool surrounding air. Tree leaves catch rain at the canopy level too &mdash; that reduces
-            the sheer volume of stormwater that can overwhelm our sewer system during heavy storms.</p>
-
-        <div class="container">
-            <figure class="ground-cover">
-                <p class="maintext">Impervious surfaces like pavements, concrete and rooftops seal the soil surface and create polluted runoff
+    <div class="container-fluid content">
+        <div class="container con-700">
+        <h2 class="wow fadeIn slow" style="text-align:left;">The Solution</h2>
+        <h2 class="number wow fadeIn slow">02</h2>
+        <p class="maintext">Research shows that trees increase climate change resilience in cities. D.C.’s trees are an incredible tool for dealing
+            with the effects of climate change. They work really hard to absorb excess stormwater and to cool surrounding
+            air. Tree leaves catch rain at the canopy level too &mdash; that reduces the sheer volume of stormwater that
+            can overwhelm our sewer system during heavy storms.</p>
+            <p class="maintext">Impervious surfaces like pavements, concrete and rooftops seal the soil surface and create polluted runoff
                     of
                     <strong>55 percent or more.</strong> In contrast, natural ground cover absorbs stormwater resulting in less than
                     <strong>10 percent runoff.</strong>
                 </p>
-                <br><br>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1565.6 676">
+        </div>
+    
+          </div>
+          
+        <div class="container">
+            <figure class="ground-cover">
+                
+                <br>
+                <br>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 100 1565.6 676">
                     <defs>
                         <style>
                             .cls-1,
@@ -683,7 +771,8 @@
                             <line class="cls-11" x1="757.69" y1="277.03" x2="718.34" y2="241.33" />
                         </g>
                         <g class="Ground">
-                            <path id="Ground-2" data-name="Ground" style="fill:#87a385;" d="M398.14,385.8q1,3.74,2.09,7.45h702.91q1.08-3.72,2.09-7.45Z" />
+                            <path id="Ground-2" data-name="Ground" style="fill:#87a385;" d="M398.14,385.8q1,3.74,2.09,7.45h702.91q1.08-3.72,2.09-7.45Z"
+                            />
                         </g>
                         <g class="Runoff_Right" data-name="Runoff Right">
                             <line class="cls-13" x1="1110.62" y1="379.7" x2="1110.62" y2="472.9" />
@@ -1058,18 +1147,23 @@
     </div>
     <div class="container-fluid waterpollution">
         <div class="container">
-            <p class="callout-text">During intense rainstorms — which are happening more and more often — water rushes over paved surfaces, picking up trash, oil, pesticides and other pollutants that flush 
-                into storm-drain systems. Each year, 3 billion gallons of polluted water flows into the Potomac and Anacostia Rivers, eventually making its way to the Chesapeake Bay. Even worse, when 
-                stormwater and sewer systems are combined big storms can cause overflows that send raw sewage into nearby waterways.</p>
+            <p class="callout-text">During intense rainstorms — which are happening more and more often — water rushes over paved surfaces, picking
+                up trash, oil, pesticides and other pollutants that flush into storm-drain systems. Each year, 3 billion
+                gallons of polluted water flows into the Potomac and Anacostia Rivers, eventually making its way to the Chesapeake
+                Bay. </p>
         </div>
     </div>
-    <div class="container content featured-developments">
-        <h2 class="wow fadeIn slow" style="text-align:center;">Action: Climate Ready DC</h2>
-        <p class="maintext">With input from our advocates, D.C. officials drafted a plan to establish climate adaptation strategies. The Department of Energy and the Environment actively solicited feedback from individuals, businesses, and organizations
-            to make sure the plan reflected the needs and priorities of D.C.’s many stakeholders. We recommended everything
+    <div class="container-fluid content">
+        <div class="container con-700">
+        <h2 class="wow fadeIn slow" style="text-align:left;">Action</h2>
+        <h2 class="number wow fadeIn slow">03</h2>
+        <p class="maintext">With input from our advocates, D.C. officials drafted a plan to establish climate adaptation strategies. The Department
+            of Energy and the Environment actively solicited feedback from individuals, businesses, and organizations to
+            make sure the plan reflected the needs and priorities of D.C.’s many stakeholders. We recommended everything
             from planting trees in raingardens, to strategically planting trees near buildings to keep them cooler, and planting
             trees near riverbanks to keep soil stable during floods. Ultimately all of these strategies were incorporated
             into the final Climate Ready DC Plan.</p>
+        </div>
     </div>
     <div style="padding-top: 3em;" class="container">
         <!--Row 1-->
@@ -1077,7 +1171,7 @@
             <div class="col-md-3 col-lg-3 col-sm-6 col-6">
                 <div class="action-content">
                     <div class="action-label one">
-                        <p>Action 1</p>
+                        <p>01 - Raingardens</p>
                     </div>
                     <div class="action-description">
                         <img src="images/raingardens.svg">
@@ -1089,7 +1183,7 @@
             <div class="col-md-3 col-lg-3 col-sm-6 col-6">
                 <div class="action-content">
                     <div class="action-label two">
-                        <p>Action 2</p>
+                        <p>02 - Buildings</p>
                     </div>
                     <div class="action-description">
                         <img src="images/buildings.svg">
@@ -1101,7 +1195,7 @@
             <div class="col-md-3 col-lg-3 col-sm-6 col-6">
                 <div class="action-content">
                     <div class="action-label three">
-                        <p>Action 3</p>
+                        <p>03 - Streets</p>
                     </div>
                     <div class="action-description">
                         <img src="images/streets.svg">
@@ -1113,7 +1207,7 @@
             <div class="col-md-3 col-lg-3 col-sm-6 col-6">
                 <div class="action-content">
                     <div class="action-label four">
-                        <p>Action 4</p>
+                        <p>04 - Riverbanks</p>
                     </div>
                     <div class="action-description">
                         <img src="images/riverbanks.svg">
@@ -1124,8 +1218,22 @@
             </div>
         </div>
     </div>
+
+    <div class="container-fluid content">
+            <div class="container con-700">
+                    <h2 class="wow fadeIn" style="text-align:center;">Watch</h2>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a href="https://www.youtube.com/watch?v=yvZJfcLZcsk&feature=youtu.be&amp;rel=0" data-toggle="lightbox" data-width="1280">
+                            <img width="100%" src="images/video-still-2.PNG">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     <div class="container content featured-developments">
-        <h2 style="text-align:center;">More Resources</h2>
+        <h2 style="text-align:center; padding-bottom:0;">More Resources</h2>
         <p class="maintext" style="text-align: center;">
             <a href="https://doee.dc.gov/sites/default/files/dc/sites/ddoe/service_content/attachments/CRDC-Report-FINAL-Web.pdf" target="_blank">Read the Climate Ready DC Plan</a> |
             <a href="https://caseytrees.org/take-action/advocate/">Become a Casey Trees Advocate</a>
@@ -1348,7 +1456,7 @@
                 .addTo(controller);
 
             //build dasharray scene
-            var scene = new ScrollMagic.Scene({ triggerElement: ".aw", duration: 100, tweenChanges: true })
+            var scene = new ScrollMagic.Scene({ triggerElement: ".overlay", duration: 100, tweenChanges: true })
                 .setTween(tweenaw)
                 .addTo(controlleraw);
 
@@ -1362,6 +1470,22 @@
         new WOW().init();
 
     </script>
+    <!--Pardot Tracking Code-->
+    <script type="text/javascript">
+        piAId = '686253';
+        piCId = '1443';
+        piHostname = 'pi.pardot.com';
+        
+        (function() {
+            function async_load(){
+                var s = document.createElement('script'); s.type = 'text/javascript';
+                s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+                var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+            }
+            if(window.attachEvent) { window.attachEvent('onload', async_load); }
+            else { window.addEventListener('load', async_load, false); }
+        })();
+        </script>
 
 </body>
 
