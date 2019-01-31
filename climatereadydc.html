@@ -194,6 +194,25 @@
                 line-height: 2em;
             }
 
+            figure.water {margin: -1em;}
+            figure.water path#Dark {animation: MoveUpDownW 2.3s .1s ease infinite;}
+            figure.water path#Medium {animation: MoveUpDownW 2.3s .4s ease infinite;}
+            figure.water path#Light {animation: MoveUpDownW 2.3s .8s ease infinite;}
+
+             @keyframes MoveUpDownW {
+                            0% {
+                                transform: translateY(0px);
+                            }
+                            
+
+                            50% {transform: translateY(6px);
+                            }
+
+                            100% {transform: translateY(0px);
+                            }
+                        }
+            
+
             .wow {
                 visibility: hidden;
             }
@@ -230,9 +249,6 @@
                 .title-crdc {
                     font-size: .4em !important;
                 }
-                /*#myVideo {
-                    height: 58vh
-                }*/
             }
         </style>
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -1145,11 +1161,40 @@
     </div>
     </div>
     </div>
+    <figure class="water">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2056.15 193.64">
+        <defs>
+            <style>
+                .wls-1 {
+                    fill: #60b8d3;
+                }
+    
+                .wls-2 {
+                    fill: #9cd3e4;
+                }
+    
+                .wls-3 {
+                    fill: #c4e5ef;
+                }
+            </style>
+        </defs>
+        <title>water</title>
+        <g id="Water">
+            <path id="Dark" class="wls-1" d="M2056.15,200.64H1.32L2.58,12.93c168,0,248,40,415.91,40s168-40,335.92-40,168,40,335.92,40,168-40,335.91-40,168,40,335.92,40,128-40,295.92-40Z"
+            />
+            <path id="Medium" class="wls-2" d="M2055.15,42.37V193.64H0V5.93c146.42,0,146.42,36,292.84,36s146.43-36,292.85-36,146.42,36,292.84,36,146.42-36,292.84-36,146.43,36,292.85,36,146.42-36,292.85-36,146.42,36,292.85,36Z"
+            />
+            <path id="Light" class="wls-3" d="M2056.15,193.64H1.32L0,45.93c168,0,168-40,335.92-40s168,40,335.91,40,168-40,335.92-40,168,40,335.91,40,168-40,335.92-40,210,40,377.92,40Z"
+            />
+        </g>
+    </svg>
+</figure>
     <div class="container-fluid waterpollution">
+            
         <div class="container">
-            <p class="callout-text">During intense rainstorms — which are happening more and more often — water rushes over paved surfaces, picking
-                up trash, oil, pesticides and other pollutants that flush into storm-drain systems. Each year, 3 billion
-                gallons of polluted water flows into the Potomac and Anacostia Rivers, eventually making its way to the Chesapeake
+            <p class="callout-text"><strong>During intense rainstorms</strong> — which are happening more and more often — water rushes over paved surfaces, picking
+                up <strong>trash, oil, pesticides</strong> and other pollutants that flush into storm-drain systems. Each year, <strong>3 billion
+                gallons of polluted water</strong> flows into the Potomac and Anacostia Rivers, eventually making its way to the Chesapeake
                 Bay. </p>
         </div>
     </div>
